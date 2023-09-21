@@ -1,0 +1,14 @@
+version: "3.8"
+services: 
+  go:
+    build: ./go/
+    ports: 
+      - "9090:9090"
+  envoy:
+    build: .
+    ports: 
+      - "8080:8080"
+  web:
+    build: ./web
+    ports:
+      - "3000:3000"
